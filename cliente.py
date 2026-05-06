@@ -30,3 +30,17 @@ class Cliente:
     # metodo para obtener nombre (buena practica)
     def get_nombre(self):
         return self.__nombre
+    
+    # compatibilidad con el resto del sistema
+    @property
+    def nombre(self):
+        return self.__nombre
+
+    @property
+    def edad(self):
+        return self.__edad
+
+
+
+
+
