@@ -1,0 +1,6 @@
+2026-05-08 14:48:01,816 - INFO - Cliente creado: Gaby
+2026-05-08 14:48:01,816 - ERROR - El nombre no puede estar vacío
+2026-05-08 14:50:43,719 - INFO - Cliente creado: Gaby
+2026-05-08 14:50:43,720 - ERROR - El nombre no puede estar vacío
+2026-05-08 14:51:42,003 - INFO - Cliente creado: Gabyy
+2026-05-08 14:51:42,003 - ERROR - El nombre no puede estar vacío
