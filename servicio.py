@@ -1,5 +1,6 @@
 # Importamos herramientas para clases abstractas
 from abc import ABC, abstractmethod
+from excepciones import ServicioError
 
 # Clase abstracta Servicio
 class Servicio(ABC):
@@ -19,13 +20,14 @@ class ReservaSala(Servicio):
 
     # Método para calcular el costo según las horas
     def calcular_costo(self, horas):
-        # Validamos que las horas sean correctas
-        if horas <= 0:
-            raise ValueError("Horas inválidas")
         
         #validamos tipo de dato
         if not isinstance(horas, (int, float)):
-            raise ValueError("Las horas deben ser numéricas")
+            raise ServicioError("Las horas deben ser numéricas")
+
+        # Validamos que las horas sean correctas
+        if horas <= 0:
+            raise ServicioError("Horas inválidas")
 
         # Retornamos el costo total
         return horas * 50000
@@ -37,13 +39,14 @@ class AlquilerEquipo(Servicio):
     
     #metodo para calcular el costo segun los dias
     def calcular_costo(self, dias):
-        #validamos que los días sean correctos
-        if dias <= 0:
-            raise ValueError("Días inválidos")
         
         #validamos tipo de dato
         if not isinstance(dias, (int, float)):
-            raise ValueError("Los días deben ser numéricos")
+            raise ServicioError("Los días deben ser numéricos")
+
+        #validamos que los días sean correctos
+        if dias <= 0:
+            raise ServicioError("Días inválidos")
 
         # Retornamos el costo total
         return dias * 30000
@@ -54,13 +57,14 @@ class Asesoria(Servicio):
     
     #metodo para calcular el costo segun las horas
     def calcular_costo(self, horas):
-        #validamos que las horas sean correctas
-        if horas <= 0:
-            raise ValueError("Horas inválidas")
         
         #validamos tipo de dato
         if not isinstance(horas, (int, float)):
-            raise ValueError("Las horas deben ser numéricas")
+            raise ServicioError("Las horas deben ser numéricas")
+
+        #validamos que las horas sean correctas
+        if horas <= 0:
+            raise ServicioError("Horas inválidas")
 
         # Retornamos el costo total
         return horas * 80000

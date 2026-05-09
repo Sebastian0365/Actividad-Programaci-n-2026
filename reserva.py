@@ -1,6 +1,7 @@
 #importamos las clases necesarias
 from cliente import Cliente
 from servicio import Servicio
+from excepciones import ReservaError
 
 #clase reserva que conecta cliente y servicio
 class Reserva:
@@ -8,15 +9,15 @@ class Reserva:
         
         #validamos que sea un cliente
         if not isinstance(cliente, Cliente):
-            raise ValueError("Cliente invalido")
+            raise ReservaError("Cliente invalido")
         
         #validamos que sea un servicio
         if not isinstance(servicio, Servicio):
-            raise ValueError("Servicio invalido")
+            raise ReservaError("Servicio invalido")
         
         #validamos el tiempo
         if tiempo <= 0:
-            raise ValueError("Tiempo invalido")
+            raise ReservaError("Tiempo invalido")
         
         
         #guardamos los datos
@@ -40,7 +41,7 @@ class Reserva:
         try:
             return self.servicio.calcular_costo(self.tiempo)
         except Exception as e:
-            raise ValueError(f"error al calcular costo: {e}")
+            raise ReservaError(f"error al calcular costo: {e}")
     
     #metodo para mostrar la información
     def mostrar(self):

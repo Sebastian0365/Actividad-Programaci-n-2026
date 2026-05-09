@@ -1,3 +1,5 @@
+from excepciones import ClienteError
+
 # Esta clase representa a un cliente del sistema
 class Cliente:
 
@@ -5,19 +7,19 @@ class Cliente:
     def __init__(self, nombre, edad):
         #validamos que el nombre sea texto
         if not isinstance(nombre, str):
-            raise ValueError("El nombre debe ser texto")
+            raise ClienteError("El nombre debe ser texto")
 
         # Validamos que el nombre no esté vacío
         if not nombre:
-            raise ValueError("El nombre no puede estar vacío")
+            raise ClienteError("El nombre no puede estar vacío")
+
+        #validamos que la edad sea un numero
+        if not isinstance(edad, int):
+            raise ClienteError("La edad debe ser un número entero")
 
         # Validamos que la edad sea válida
         if edad <= 0:
-            raise ValueError("Edad inválida")
-        
-        #validamos que la edad sea un numero
-        if not isinstance(edad, int):
-            raise ValueError("La edad debe ser un número entero")
+            raise ClienteError("Edad inválida")
         
         #usamos encapsulación para proteger los atributos
         self.__nombre = nombre

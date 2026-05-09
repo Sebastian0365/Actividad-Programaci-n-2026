@@ -4,3 +4,10 @@
 2026-05-08 14:50:43,720 - ERROR - El nombre no puede estar vacío
 2026-05-08 14:51:42,003 - INFO - Cliente creado: Gabyy
 2026-05-08 14:51:42,003 - ERROR - El nombre no puede estar vacío
+2026-05-08 21:46:26,181 - ERROR - El nombre no puede estar vacío
+2026-05-08 21:46:26,182 - INFO - Reserva de equipo creada
+2026-05-08 21:46:26,182 - INFO - Reserva de asesoria confirmada
+2026-05-08 22:00:07,121 - INFO - Reserva de sala creada
+2026-05-08 22:00:07,121 - ERROR - El nombre no puede estar vacío
+2026-05-08 22:00:07,122 - INFO - Reserva de equipo creada
+2026-05-08 22:00:07,125 - INFO - Reserva de asesoria confirmada
